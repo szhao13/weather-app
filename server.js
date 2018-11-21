@@ -2,12 +2,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
-const app = express()
+const app = express();
 
 const apiKey = '0a5d5fd45c0ef7b565b787396c87e2f4';
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
@@ -31,8 +31,8 @@ app.post('/', function (req, res) {
       }
     }
   });
-})
+});
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('Example app listening on port 3000!');
 })
